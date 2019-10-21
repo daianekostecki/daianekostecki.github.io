@@ -1,0 +1,22 @@
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column">
+        <h2>Bem vindo(a) ao localizador de agências do Itaú.</h2>
+        <p>Tem sempre uma agência do Itaú perto de você!</p>
+      </div>
+      <div *ngIf="exibirInf" class="infoAgencia">
+        <p><strong>Endereço:</strong> {{dadosAgencia.endereco}}</p>
+        <p><strong>Telefone:</strong> {{dadosAgencia.telefone}}</p>
+        <p><strong>Horario de Funcionamento:</strong></p>
+        <div *ngFor="let option of dadosAgencia.horarioFuncionamento">
+          <p> - {{option}}</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="margem-mapa">
+      <div id="map" class="mapa"></div>
+    </div>
+  </div>
+</section>
